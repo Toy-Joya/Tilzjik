@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    color: white;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img{
+    padding: 3px;
+}
+
+.grid_container > * {
+    text-align: center;
+}
+
+.encabezado{
+    grid-area: encabezado;
+    background-color: black;
+}
+
+.menu{
+    grid-area: menu;
+    background-color: black;
+}
+
+.catalogo{
+    grid-area: catalogo;
+    background-color: gray;
+}
+
+.lateral1{
+    grid-area: lateral1;
+    background-color: rgb(10, 10, 10);
+}
+
+.lateral2{
+    grid-area: lateral2;
+    background-color: rgb(10, 10, 10);
+}
+
+.grid_container{
+    display: grid;
+    grid-template:
+    "encabezado lateral1" 15%
+    "menu lateral2" 15%
+    "catalogo catalogo" /
+    auto 20%
+    ;
+}
+
+@media (min-width: 600px){
+    .grid_container{
+        grid-template: 
+        "lateral1 encabezado lateral2" 15%
+        "lateral1 menu lateral2" 15%
+        "catalogo catalogo catalogo" auto /
+        15% auto 15%
+        ;
+    }
+}
+
+@media (min-width: 900px){
+    .grid_container{
+        grid-template: 
+        "lateral1 encabezado lateral2" 15%
+        "lateral1 menu lateral2" 15%
+        "lateral1 catalogo lateral2" auto /
+        15% auto 15%
+        ;
+    }
+}
+
+.bandera{
+    background-color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.subcaja{
+    background-color: black;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.boton{
+    background-color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.cajas{
+    display: grid;
+    grid-template:
+    "bandera subcaja boton1" auto/
+    25% auto 15%
+    ;
+}
+
+
+
